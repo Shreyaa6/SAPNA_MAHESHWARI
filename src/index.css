@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-paper: #ebe5d8;
+    --ink-dark: #2c2825;
+    --riso-pink: #ec5395;
+    --paper-texture: #e4ddd0;
+  }
+
+  body {
+    background-color: #ebe5d8;
+    color: #2c2825;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Paper grain overlay */
+  .paper-grain {
+    background-color: #ebe5d8;
+    background-image: radial-gradient(rgba(44, 40, 37, 0.04) 1px, transparent 0);
+    background-size: 8px 8px;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-editorial {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Pulsing heart animation */
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.22);
+  }
+}
+
+.animate-heart-pulse {
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
+
+/* Subtle floating doodle effect */
+@keyframes doodleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0.8deg);
+  }
+}
+
+.animate-doodle-float {
+  animation: doodleFloat 4s ease-in-out infinite;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e2dbce;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5bcae;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec5395;
+}
